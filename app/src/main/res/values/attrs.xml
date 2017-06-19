@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MultiStateLayout">
+        <attr name="errorLayout" format="reference"/>
+        <attr name="noNetworkLayout" format="reference"/>
+        <attr name="contentLayout" format="reference"/>
+    </declare-styleable>
+
+
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tuionf.multistatelayout.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/no_net"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="没网了"/>
+        <Button
+            android:id="@+id/main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="主布局"/>
+        <Button
+            android:id="@+id/custom_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="错误"/>
+    </LinearLayout>
+
+    <com.example.tuionf.multistatelayout.MultiStateLayout
+        android:layout_below="@id/ll"
+        android:id="@+id/main_multiplestatusview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:errorLayout="@layout/custom_error_view"
+        app:noNetworkLayout="@layout/custom_no_network_view"
+        app:contentLayout="@layout/custom_content"
+        />
+
+</RelativeLayout>
